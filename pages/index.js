@@ -36,7 +36,7 @@ export default function Home() {
       }
     }
     connectwalletOnPageLoad();
-  }, []);
+  });
 
   return (
     <div className="page">
