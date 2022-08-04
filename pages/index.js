@@ -8,8 +8,8 @@ export default function Home() {
 
   async function connect() {
     try {
-      await activate(injected)
-      localStorage.setItem('isWalletConnected', true)
+      await activate(injected);
+      localStorage.setItem('isWalletConnected', true);
     }catch(ex) {
       console.log(ex);
     }
@@ -17,8 +17,8 @@ export default function Home() {
 
   async function disconnect() {
     try {
-      deactivate()
-      localStorage.setItem('isWalletConnected', false)
+      deactivate();
+      localStorage.setItem('isWalletConnected', false);
 
     }catch(ex) {
       console.log(ex);
@@ -29,14 +29,14 @@ export default function Home() {
     const connectwalletOnPageLoad = async () => {
       if(localStorage?.getItem('isWalletConnected') === 'true'){
         try {
-          await activate(injected)
+          await activate(injected);
         } catch (ex) {
-          console.log(ex)
+          console.log(ex);
         }
       }
     }
-    connectwalletOnPageLoad()
-  }, [])
+    connectwalletOnPageLoad();
+  }, []);
 
   return (
     <div className="page">
